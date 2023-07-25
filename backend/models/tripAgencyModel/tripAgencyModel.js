@@ -1,6 +1,6 @@
 const mongoose=require('mongoose')
 const schema=mongoose.schema
-const restaurantSchema=schema({
+const hotelSchema=schema({
     name:{
         type:String,
         required: true,
@@ -23,5 +23,5 @@ const restaurantSchema=schema({
         }
     ]
 })
-const hotel=mongoose.model("restaurant", hotelSchema)
+const hotel=mongoose.model("tripAgency", hotelSchema)
 Module.exports=hotel
