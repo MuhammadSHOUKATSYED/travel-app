@@ -1,4 +1,5 @@
 const express=require('express')
+const {getHotelById, getHotels, createHotel, deleteHotel, updateHotel}=require('../../../controllers/hotelController/hotelController')
 const hotelRouter=express.Router
 hotelRouter.get("/", getHotels)
 hotelRouter.get('/:id', getHotelById)

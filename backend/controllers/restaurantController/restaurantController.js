@@ -86,5 +86,5 @@ const getrestaurantById = async (req, res, next) =>{
         res.status(500).send('Error retrieving restaurant');
     }
 }
-modul.exports = {getrestaurantById, getrestaurants, createrestaurant, deleterestaurant, updaterestaurant};
+modul.exports = {getSestaurantById, getRestaurants, createRestaurant, deleteRestaurant, updateRestaurant};
 
