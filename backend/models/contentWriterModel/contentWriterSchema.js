@@ -29,6 +29,6 @@ const contentWriterSchema = new mongoose.Schema(
     }
 
 );
-const contentWriter = mongoose.model("contentWriter", contentWriterSchema);
+const contentWriter = mongoose.model("ContentWriter", contentWriterSchema);
 
 module.exports = contentWriter;
