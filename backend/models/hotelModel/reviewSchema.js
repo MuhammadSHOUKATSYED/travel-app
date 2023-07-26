@@ -1,6 +1,5 @@
 const mongoose=require('mongoose')
-const schema=mongoose.schema
-const reviewSchema=new schema({
+const reviewSchema=new mongoose.schema({
     opponion:{
         type:String,
         required: false,

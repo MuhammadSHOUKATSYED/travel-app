@@ -1,6 +1,6 @@
 const express=require('express')
 const restaurantRouter=express.Router
-hotelRouter.get("/", getRestaurant)
+hotelRouter.get("/", getRestaurants)
 hotelRouter.get('/:id', getRestaurantById)
 hotelRouter.post('/', createRestaurant)
 hotelRouter.patch('/:id', updateRestaurant)

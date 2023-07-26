@@ -1,4 +1,5 @@
 TravelKaro.pk - Web Application
+Authur: This app is developed by Syed Muhammad Ali and Abad Nasser.
 Overview:
 Welcome to TravelKaro.pk, a web application designed to provide a platform for various types of users to explore and interact with different places in Pakistan and around the world. The application caters to the following types of users:
 

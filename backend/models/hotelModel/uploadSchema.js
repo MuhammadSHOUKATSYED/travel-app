@@ -1,7 +1,6 @@
 // for images of the hotel
 const mongoose = require("mongoose");
-const schema=mongoose.schema
-const UploadSchema = new schema({
+const UploadSchema = mongoose.schema({
   fileName: {
     type: String,
     required: true,
@@ -15,7 +14,7 @@ const UploadSchema = new schema({
     default: Date.now,
   },
   of:{
-    type: schema.Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref:"hotel",
   }
 });
