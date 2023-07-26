@@ -86,16 +86,7 @@ static get = async (req, res, next) =>{
         findRecord = await AdminModel.findOne({ adminId: req.params.adminId })
         if(findRecord){
             const admin = await AdminModel.findById(findRecord._id);
-            res.json(
-                admin.map((admin) => ({
-                    name: admin.name,
-                    userName: admin.userName,
-                    email: admin.email,
-                    password: admin.password,
-                    role: admin.role,
-                    adminId: admin.adminId
-                }))
-            );
+            res.json(admin);
         }
         else{
             res.status(404).send("Admin Not Found")

@@ -79,15 +79,8 @@ static get = async (req, res, next) =>{
     try {
         findRecord = await ForumModel.findOne({ questionId: req.params.questionId })
         if(findRecord){
-            const admin = await ForumModel.findById(findRecord._id);
-            res.json(
-                admin.map((forum) => ({
-                    question: forum.question,
-                    questionId: forum.questionId,
-                    userId: forum.userId,
-                    answer: forum.answer,
-                }))
-            );
+            const forum = await ForumModel.findById(findRecord._id);
+            res.json(forum);
         }
         else{
             res.status(404).send("Forum Not Found")
