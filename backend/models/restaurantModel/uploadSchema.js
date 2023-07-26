@@ -1,7 +1,6 @@
 // for images of the hotel
 const mongoose = require("mongoose");
-const schema=mongoose.schema
-const UploadSchema = new schema({
+const UploadSchema = new restaurantSchema({
   fileName: {
     type: String,
     required: true,

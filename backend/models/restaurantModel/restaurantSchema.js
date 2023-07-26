@@ -1,6 +1,6 @@
+import reviews from "../restaurant/Model/reviewSchema"
 const mongoose=require('mongoose')
-const schema=mongoose.schema
-const restaurantSchema=schema({
+const restaurantSchema=new mongoose.schema({
     name:{
         type:String,
         required: true,
@@ -13,15 +13,15 @@ const restaurantSchema=schema({
         }
     ],
     location:{
-        type:stringify, 
+        type:String, 
         required:true,
     },
     reviews:[
         {
-            type:schema.types.ObjectId,
+            type:Schema.Types.ObjectId,
             ref:"reviews"
         }
     ]
 })
-const hotel=mongoose.model("restaurant", hotelSchema)
+const hotel=mongoose.model("restaurant", restaurantSchema)
 Module.exports=hotel

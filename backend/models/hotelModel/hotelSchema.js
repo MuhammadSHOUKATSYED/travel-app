@@ -1,6 +1,5 @@
 const mongoose=require('mongoose')
-const schema=mongoose.schema
-const hotelSchema=schema({
+const hotelSchema=mongoose.schema({
     name:{
         type:String,
         required: true,
@@ -18,7 +17,7 @@ const hotelSchema=schema({
     },
     reviews:[
         {
-            type:schema.types.ObjectId,
+            type:Schema.Types.ObjectId,
             ref:"reviews"
         }
     ]
