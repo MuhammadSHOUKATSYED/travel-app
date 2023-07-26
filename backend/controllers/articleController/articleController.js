@@ -1,7 +1,7 @@
 const BaseController = require('./index');
 const ArticleModel = require('../../models/articleModel/articleSchema');
 
-class ForumController {
+class ArticleController {
 
 
 static index =  async (req, res, next) =>{
@@ -93,4 +93,4 @@ static get = async (req, res, next) =>{
 
 }
 
-modul.exports = ForumController;
+modul.exports = ArticleController;
