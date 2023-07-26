@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const adminSchema = new mongoose.Schema(
+const contentWriterSchema = new mongoose.Schema(
     {
     name: {
         type: String,
@@ -29,6 +29,6 @@ const adminSchema = new mongoose.Schema(
     }
 
 );
-const Admin = mongoose.model("Admin", adminSchema);
+const contentWriter = mongoose.model("contentWriter", contentWriterSchema);
 
-module.exports = Admin;
+module.exports = contentWriter;
