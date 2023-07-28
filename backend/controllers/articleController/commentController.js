@@ -1,4 +1,4 @@
-const BaseController = require('./index');
+const BaseController = require('../index');
 const CommentModel = require('../../models/articleModel/commentSchema');
 
 class CommentController {
@@ -93,4 +93,4 @@ static get = async (req, res, next) =>{
 
 }
 
-modul.exports = CommentController;
+module.exports = CommentController;

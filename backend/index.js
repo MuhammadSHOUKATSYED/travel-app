@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const connectdb = require('./config_db');
 require("dotenv").config();
-const MONGODB_URI = "mongodb+srv://i202303:AllahMolaPunjtanPakASarewithme786@cluster0.hl8yuqy.mongodb.net/travel-app";
+const MONGODB_URI = "mongodb+srv://i202303:Password1234@cluster0.hl8yuqy.mongodb.net/travel-app";
 connectdb(MONGODB_URI);
 
 const adminRouter = require('./routes/version01/adminRoutes/adminEndPoints');
@@ -13,7 +13,7 @@ const forumRouter = require('./routes/version01/forumRoutes/forumEndpoints');
 const hotelRouter = require('./routes/version01/hotelRoutes/hotelEndPoints');
 const restaurantRouter = require('./routes/version01/restaurantRoutes/restaurantEndPoints');
 const superAdminRouter = require('./routes/version01/superAdminRoutes/superAdminEndpoints');
-const tripagencyRouter = require('./routes/version01/tripAgencyRoutes/tripAgencyRoutes');
+const tripagencyRouter = require('./routes/version01/tripAgencyRoutes/tripAgencyEndpoints');
 const userRouter = require('./routes/version01/userRoutes/userEndpoints');
 
 

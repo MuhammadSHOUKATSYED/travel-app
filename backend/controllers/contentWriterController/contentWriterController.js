@@ -1,4 +1,4 @@
-const BaseController = require('./index');
+const BaseController = require('../index');
 const ContentWriterModel = require('../../models/contentWriterModel/contentWriterSchema')
 
 class ContentWriterController {
@@ -99,4 +99,4 @@ static get = async (req, res, next) =>{
 
 }
 
-modul.exports = ContentWriterController;
+module.exports = ContentWriterController;

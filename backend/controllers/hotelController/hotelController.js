@@ -1,4 +1,4 @@
-const BaseController = require('./index');
+const BaseController = require('../index');
 const hotelModel = require('../../models/hotelModel/hotelSchema');
 
 const getHotels=async (req, res, next) =>{
@@ -86,5 +86,5 @@ const getHotelById = async (req, res, next) =>{
         res.status(500).send('Error retrieving Hotel');
     }
 }
-modul.exports = ForumController;
+module.exports = ForumController;
 
