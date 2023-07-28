@@ -1,7 +1,7 @@
 const express=require('express')
 const {getTripAgencyById, getTripAgencies, createTripAgency, deleteTripAgency, updateTripAgency}=require('../../../controllers/tripAgencyController/tripAgencyController')
 
-const TripAgencyRouter=express.Router
+const TripAgencyRouter=express.Router();
 hotelRouter.get("/", getTripAgencies)
 hotelRouter.get('/:id', getTripAgencyById)
 hotelRouter.post('/', createTripAgency)
