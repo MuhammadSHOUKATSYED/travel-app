@@ -1,5 +1,6 @@
 // for images of the hotel
 const mongoose = require("mongoose");
+const restaurants=require('./restaurantSchema')
 const UploadSchema = new restaurantSchema({
   fileName: {
     type: String,
@@ -13,9 +14,9 @@ const UploadSchema = new restaurantSchema({
     type: Date,
     default: Date.now,
   },
-  of:{
+  restaurant:{
     type: schema.Types.ObjectId,
-    ref:"hotel",
+    ref:restaurants.collection.name,
   }
 });
 const Uploads=mongoose.model("Image", UploadSchema);
