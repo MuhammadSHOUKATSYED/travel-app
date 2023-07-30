@@ -1,5 +1,5 @@
 const express = require('express');
-const commentRouter = express.Router;
+const commentRouter = express.Router();
 const commentController = require('../../../controllers/articleController/commentController');
 
 commentRouter.get('/', commentController.index);

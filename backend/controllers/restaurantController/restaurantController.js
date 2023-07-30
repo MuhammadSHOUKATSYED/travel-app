@@ -1,4 +1,4 @@
-const BaseController = require('./index');
+const BaseController = require('../index');
 const hotelModel = require('../../models/restaurantModel/restaurantSchema');
 
 const getRestaurants=async (req, res, next) =>{
@@ -86,5 +86,5 @@ const getrestaurantById = async (req, res, next) =>{
         res.status(500).send('Error retrieving restaurant');
     }
 }
-modul.exports = {getSestaurantById, getRestaurants, createRestaurant, deleteRestaurant, updateRestaurant};
+module.exports = {getSestaurantById, getRestaurants, createRestaurant, deleteRestaurant, updateRestaurant};
 

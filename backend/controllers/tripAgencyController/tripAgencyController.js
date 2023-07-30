@@ -1,4 +1,4 @@
-const BaseController = require('./index');
+const BaseController = require('../index');
 const tripAgencyModel = require('../../models/tripAgencyModel/tripAgencySchema');
 
 const getTripAgencies=async (req, res, next) =>{
@@ -85,5 +85,5 @@ const gettripAgencyById = async (req, res, next) =>{
         res.status(500).send('Error retrieving restaurant');
     }
 }
-modul.exports = {gettripAgencyById, getTripAgencies, createtripAgency, deletetripAgency, updatetripAgency};
+module.exports = {gettripAgencyById, getTripAgencies, createtripAgency, deletetripAgency, updatetripAgency};
 

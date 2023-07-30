@@ -1,4 +1,4 @@
-const BaseController = require('./index');
+const BaseController = require('../index');
 const ForumModel = require('../../models/forumModel/forumSchema');
 
 class ForumController {
@@ -93,4 +93,4 @@ static get = async (req, res, next) =>{
 
 }
 
-modul.exports = ForumController;
+module.exports = ForumController;
