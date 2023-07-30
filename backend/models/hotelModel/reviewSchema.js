@@ -1,4 +1,6 @@
 const mongoose=require('mongoose')
+const hotels=require('./hotelSchema')
+const users=require('../userModel/userSchema')
 const reviewSchema=new mongoose.schema({
     opponion:{
         type:String,
@@ -6,13 +8,18 @@ const reviewSchema=new mongoose.schema({
     },
     rating:{
         type:Number,
+        min:1,
+        max:5,
         required: false,
     },
     user:{
         type:schema.Types.ObjectId,
-        ref:"User"
+        ref:users.collection.name,
     },
-    
+    hotels:{
+        type:schema.Types.ObjectId,
+        ref:hotels.collection.name,
+    }   
 })
-const reviews=mongoose.model("reviews", reviewSchema)
+const reviews=mongoose.model("Review", reviewSchema)
 Module.exports=reviews

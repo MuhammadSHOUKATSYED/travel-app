@@ -8,5 +8,4 @@ connectdb(MONGODB_URI);
 
 app.listen(3001, (req,res)=>{
     console.log('server running on the port 3001');
-
 })

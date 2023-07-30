@@ -1,5 +1,6 @@
 // for images of the hotel
 const mongoose = require("mongoose");
+const hotels=require('./hotelSchema')
 const UploadSchema = mongoose.schema({
   fileName: {
     type: String,
@@ -13,10 +14,10 @@ const UploadSchema = mongoose.schema({
     type: Date,
     default: Date.now,
   },
-  of:{
+  hotel:{
     type: Schema.Types.ObjectId,
-    ref:"hotel",
+    ref:hotels.collection.name,
   }
 });
-const uploads=mongoose.model("image", UploadSchema);
+const uploads=mongoose.model("Image", UploadSchema);
 module.exports = uploads

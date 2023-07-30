@@ -1,27 +1,47 @@
-const mongoose=require('mongoose')
-const schema=mongoose.schema
-const hotelSchema=schema({
-    name:{
-        type:String,
+const mongoose = require('mongoose');
+const images = require('./uploadSchema');
+const reviews = require('./reviewSchema');
+const tripAgencySchema = new mongoose.Schema({
+    name: {
+        type: String,
         required: true,
-        trim: true
+        trim: true,
     },
-    image:[
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    images: [
         {
-            type:schema.types.ObjectId,
-            ref:"image"
-        }
+            type: mongoose.Schema.Types.ObjectId,
+            ref: images.collection.name,
+        },
     ],
-    location:{
-        type:stringify, 
-        required:true,
+    location: {
+        type: String,
+        required: true,
     },
-    reviews:[
-        {
-            type:schema.types.ObjectId,
-            ref:"reviews"
-        }
+    description: {
+        type: String,
+        required: true,
+    },
+    contact: {
+        phone: String,
+        email: String,
+        website: String,
+    },
+    tripTypes: {
+        type: [String],
+        required: true,
+    },
+    review: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: reviews.collection.name,
+    }
     ]
-})
-const hotel=mongoose.model("tripAgency", hotelSchema)
-Module.exports=hotel
+});
+
+const TripAgency = mongoose.model('TripAgency', tripAgencySchema);
+
+module.exports = TripAgency;
