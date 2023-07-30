@@ -17,7 +17,7 @@ const getTripAgencies=async (req, res, next) =>{
     }
 }
 
-const createtripAgency  = async (req, res, next) =>{
+const createTripAgency  = async (req, res, next) =>{
     const newtripAgency = new tripAgencyModel({
                 name:req.body.name,
                 image:req.File.image,
@@ -32,7 +32,7 @@ const createtripAgency  = async (req, res, next) =>{
         res.status(500).send('Error creating a new tripAgency');
     }
 }
-const updatetripAgency= async (req, res, next) =>{
+const updateTripAgency= async (req, res, next) =>{
     try {
 
 
@@ -55,7 +55,7 @@ const updatetripAgency= async (req, res, next) =>{
         res.status(500).send('Error updating tripAgency');
     }
 }
-const deletetripAgency = async (req, res, next) =>{
+const deleteTripAgency = async (req, res, next) =>{
     try {
         findtripAgency = await tripAgencyModel.findOne({ tripAgencyId: req.params.hotelId })
         if(findtripAgency){
@@ -70,7 +70,7 @@ const deletetripAgency = async (req, res, next) =>{
         res.status(500).send('Error deleting tripAgency');
     }
 }
-const gettripAgencyById = async (req, res, next) =>{
+const getTripAgencyById = async (req, res, next) =>{
     try {
         findtripAgency = await tripAgencyModel.findOne({ tripAgencyId: req.params.tripAgencyId })
         if(findtripAgency){
@@ -85,5 +85,5 @@ const gettripAgencyById = async (req, res, next) =>{
         res.status(500).send('Error retrieving restaurant');
     }
 }
-module.exports = {gettripAgencyById, getTripAgencies, createtripAgency, deletetripAgency, updatetripAgency};
+module.exports = {getTripAgencyById, getTripAgencies, createTripAgency, deleteTripAgency, updateTripAgency};
 

@@ -86,5 +86,5 @@ const getHotelById = async (req, res, next) =>{
         res.status(500).send('Error retrieving Hotel');
     }
 }
-module.exports = ForumController;
+module.exports = {getHotels, createHotel, updateHotel, deleteHotel, getHotelById};
 

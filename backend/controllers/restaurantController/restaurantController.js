@@ -18,7 +18,7 @@ const getRestaurants=async (req, res, next) =>{
     }
 }
 
-const createrestaurant  = async (req, res, next) =>{
+const createRestaurant  = async (req, res, next) =>{
     const newrestaurant = new restaurantModel({
                 name:req.body.name,
                 image:req.File.image,
@@ -33,7 +33,7 @@ const createrestaurant  = async (req, res, next) =>{
         res.status(500).send('Error creating a new restaurant');
     }
 }
-const updaterestaurant = async (req, res, next) =>{
+const updateRestaurant = async (req, res, next) =>{
     try {
 
 
@@ -56,7 +56,7 @@ const updaterestaurant = async (req, res, next) =>{
         res.status(500).send('Error updating restaurant');
     }
 }
-const deleterestaurant = async (req, res, next) =>{
+const deleteRestaurant = async (req, res, next) =>{
     try {
         findrestaurant = await restaurantModel.findOne({ hotelId: req.params.hotelId })
         if(findrestaurant){
@@ -71,7 +71,7 @@ const deleterestaurant = async (req, res, next) =>{
         res.status(500).send('Error deleting restaurant');
     }
 }
-const getrestaurantById = async (req, res, next) =>{
+const getRestaurantById = async (req, res, next) =>{
     try {
         findrestaurant = await restaurantModel.findOne({ restaurantId: req.params.restaurantId })
         if(findrestaurant){
@@ -86,5 +86,5 @@ const getrestaurantById = async (req, res, next) =>{
         res.status(500).send('Error retrieving restaurant');
     }
 }
-module.exports = {getSestaurantById, getRestaurants, createRestaurant, deleteRestaurant, updateRestaurant};
+module.exports = {getRestaurants, createRestaurant, deleteRestaurant, updateRestaurant, getRestaurantById};
 

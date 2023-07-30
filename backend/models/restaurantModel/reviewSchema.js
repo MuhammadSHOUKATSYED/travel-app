@@ -14,5 +14,5 @@ const reviewSchema=new restaurantSchema({
     },
     
 })
-const reviews=mongoose.model("reviews", reviewSchema)
-Module.exports=reviews
+const Reviews = mongoose.model("Reviews", reviewSchema)
+Module.exports = Reviews

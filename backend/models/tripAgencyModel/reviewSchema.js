@@ -1,6 +1,6 @@
-const mongoose=require('mongoose')
-const schema=mongoose.schema
-const reviewSchema=new schema({
+const mongoose = require('mongoose')
+const schema = mongoose.schema
+const reviewSchema = new schema({
     opponion:{
         type:String,
         required: false,
@@ -15,5 +15,5 @@ const reviewSchema=new schema({
     },
     
 })
-const reviews=mongoose.model("reviews", reviewSchema)
-Module.exports=reviews
+const Reviews = mongoose.model("Reviews", reviewSchema);
+Module.exports = Reviews;

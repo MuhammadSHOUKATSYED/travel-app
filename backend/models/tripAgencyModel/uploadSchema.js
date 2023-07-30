@@ -19,5 +19,5 @@ const UploadSchema = new schema({
     ref:"hotel",
   }
 });
-const uploads=mongoose.model("image", UploadSchema);
-module.exports = uploads
+const Uploads = mongoose.model("Image", UploadSchema);
+module.exports = Uploads;

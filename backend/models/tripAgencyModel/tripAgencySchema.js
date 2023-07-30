@@ -1,6 +1,6 @@
-const mongoose=require('mongoose')
-const schema=mongoose.schema
-const hotelSchema=schema({
+const mongoose = require('mongoose')
+const schema = mongoose.schema
+const tripAgencySchema = schema({
     name:{
         type:String,
         required: true,
@@ -23,5 +23,5 @@ const hotelSchema=schema({
         }
     ]
 })
-const hotel=mongoose.model("tripAgency", hotelSchema)
-Module.exports=hotel
+const TripAgency = mongoose.model("TripAgency", tripAgencySchema);
+Module.exports = TripAgency;

@@ -1,5 +1,5 @@
 const mongoose=require('mongoose')
-const hotelSchema=mongoose.schema({
+const hotelSchema= new mongoose.schema({
     name:{
         type:String,
         required: true,
@@ -22,5 +22,5 @@ const hotelSchema=mongoose.schema({
         }
     ]
 })
-const hotel=mongoose.model("hotel", hotelSchema)
-Module.exports=hotel
+const Hotel = mongoose.model("Hotel", hotelSchema);
+Module.exports = Hotel;
