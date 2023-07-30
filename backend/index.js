@@ -31,9 +31,4 @@ app.use('/users', userRouter);
 
 app.listen(3001, (req,res)=>{
     console.log('server running on the port 3001');
-<<<<<<< HEAD
-})
-=======
-
 });
->>>>>>> 5ffab13605bd8e8881182c43d44445f2703249af
