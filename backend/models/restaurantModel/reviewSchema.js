@@ -22,10 +22,5 @@ const reviewSchema=new restaurantSchema({
     }
     
 })
-<<<<<<< HEAD
-const Reviews = mongoose.model("Reviews", reviewSchema)
-Module.exports = Reviews
-=======
 const review=mongoose.model("Review", reviewSchema)
 Module.exports=review
->>>>>>> 43e2c7a259a5fd1c7cfd6cc14063000c0855be91

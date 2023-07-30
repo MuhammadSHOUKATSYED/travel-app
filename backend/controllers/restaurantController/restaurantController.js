@@ -1,5 +1,5 @@
 const BaseController = require('../index');
-const hotelModel = require('../../models/restaurantModel/restaurantSchema');
+const restuarantModel = require('../../models/restaurantModel/restaurantSchema');
 
 const getRestaurants=async (req, res, next) =>{
     try {

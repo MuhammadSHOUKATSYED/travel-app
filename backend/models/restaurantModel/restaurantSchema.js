@@ -34,15 +34,6 @@ const restaurantSchema = new mongoose.Schema({
     },
     review: [
         {
-<<<<<<< HEAD
-            type:Schema.Types.ObjectId,
-            ref:"reviews"
-        }
-    ]
-})
-const Restaurant = mongoose.model("Restaurant", restaurantSchema)
-Module.exports = Restaurant;
-=======
             type: mongoose.Schema.Types.ObjectId,
             ref: reviews.collection.name,
         },
@@ -71,4 +62,3 @@ Module.exports = Restaurant;
 const Restaurant = mongoose.model('Restaurant', restaurantSchema);
 
 module.exports = Restaurant;
->>>>>>> 43e2c7a259a5fd1c7cfd6cc14063000c0855be91
