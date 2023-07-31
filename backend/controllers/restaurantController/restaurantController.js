@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const restaurantModel = require('../../models/restaurantModel/restaurantSchema')
 class restaurantController {
     static index = async (req, res, next) => {
@@ -27,6 +28,10 @@ class restaurantController {
         try{
             const restaurants=await restaurantModel.findOne((restaurant)=>{
                 restaurant.id=req.params.id
+=======
+const BaseController = require('../index');
+const restuarantModel = require('../../models/restaurantModel/restaurantSchema');
+>>>>>>> 332faf12aa680d85b176fd0f3c940c9e5bc4c1fb
 
             })
             if(restaurants){
@@ -121,4 +126,78 @@ class restaurantController {
         
     }
 }
+<<<<<<< HEAD
 module.exports = restaurantController
+=======
+
+const createRestaurant  = async (req, res, next) =>{
+    const newrestaurant = new restaurantModel({
+                name:req.body.name,
+                image:req.File.image,
+                location:req.body.location,
+    });
+
+    try {
+        const savedrestaurant = await newrestaurant.save();
+        res.status(201).json(savedrestaurant);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error creating a new restaurant');
+    }
+}
+const updateRestaurant = async (req, res, next) =>{
+    try {
+
+
+        findRecord = await restaurantModel.findOne({ restaurantId: req.body.restaurantId })
+        if(findRecord){
+            const updatedrestaurant = await restaurantModel.findByIdAndUpdate(
+                findRecord._id,
+                {
+                    name:req.body.name,
+                    image:req.File.image,
+                    location:req.body.location,
+                },
+            );
+            res.json(updatedrestaurant);    
+        }else {
+            res.send("No Such Record restaurant")
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error updating restaurant');
+    }
+}
+const deleteRestaurant = async (req, res, next) =>{
+    try {
+        findrestaurant = await restaurantModel.findOne({ hotelId: req.params.hotelId })
+        if(findrestaurant){
+            const removedrestaurant = await findrestaurant.findByIdAndRemove(findrestaurant._id);
+            res.json(removedrestaurant);
+        }
+        else{
+            res.status(404).send("restaurant Not found")
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error deleting restaurant');
+    }
+}
+const getRestaurantById = async (req, res, next) =>{
+    try {
+        findrestaurant = await restaurantModel.findOne({ restaurantId: req.params.restaurantId })
+        if(findrestaurant){
+            const restaurant = await restaurantModel.findById(findrestaurant._id);
+            res.json(restaurant);
+        }
+        else{
+            res.status(404).send("restaurant Not Found")
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error retrieving restaurant');
+    }
+}
+module.exports = {getRestaurants, createRestaurant, deleteRestaurant, updateRestaurant, getRestaurantById};
+
+>>>>>>> 332faf12aa680d85b176fd0f3c940c9e5bc4c1fb

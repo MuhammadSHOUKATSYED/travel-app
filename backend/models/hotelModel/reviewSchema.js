@@ -26,5 +26,10 @@ const reviewSchema=new mongoose.schema({
         ref:hotels.collection.name,
     }   
 })
+<<<<<<< HEAD
+const Reviews = mongoose.model("Reviews", reviewSchema);
+Module.exports = Reviews;
+=======
 const reviews=mongoose.model("Review", reviewSchema)
 Module.exports=reviews
+>>>>>>> 43e2c7a259a5fd1c7cfd6cc14063000c0855be91
