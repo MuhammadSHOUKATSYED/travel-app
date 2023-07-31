@@ -3,6 +3,11 @@ const images = require('./uploadSchema');
 const reviews = require('./reviewSchema');
 
 const restaurantSchema = new mongoose.Schema({
+    id:{
+        type:String,
+        required:true,
+        unique:true,
+    },
     name: {
         type: String,
         required: true,
@@ -13,6 +18,10 @@ const restaurantSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
+    },
+    password:{
+        type:String,
+        required:true,
     },
     images: [
         {

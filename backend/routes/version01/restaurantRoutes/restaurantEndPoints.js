@@ -1,10 +1,15 @@
-const express=require('express')
-const {getRestaurantById, getRestaurants, createRestaurant, deleteRestaurant, updateRestaurant}=require('../../../controllers/restaurantController/restaurantController')
+const express = require('express');
+const restaurantRouter = express.Router();
+const restaurantController = require('../../../controllers/restaurantController/restaurantController');
 
-const restaurantRouter=express.Router();
-hotelRouter.get("/", getRestaurants)
-hotelRouter.get('/:id', getRestaurantById)
-hotelRouter.post('/', createRestaurant)
-hotelRouter.patch('/:id', updateRestaurant)
-hotelRouter.delete('/:id', deleteRestaurant)
-module.exports=restaurantRouter
+restaurantRouter.get('/',restaurantController.index);
+restaurantRouter.get('/:id',restaurantController.get);
+restaurantRouter.post('/',restaurantController.create);
+restaurantRouter.put('/:id',restaurantController.update);
+restaurantRouter.delete('/:id',restaurantController.delete);
+
+
+//for login in the hotel we create endpoints as 
+restaurantRouter.post('/login',restaurantController.login);
+
+module.exports = restaurantRouter;

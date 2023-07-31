@@ -1,10 +1,15 @@
-const express=require('express')
-const {getTripAgencyById, getTripAgencies, createTripAgency, deleteTripAgency, updateTripAgency}=require('../../../controllers/tripAgencyController/tripAgencyController')
+const express = require('express');
+const tripAgencyRouter = express.Router();
+const tripAgencyController = require('../../../controllers/tripAgencyController/tripAgencyController');
 
-const TripAgencyRouter=express.Router();
-hotelRouter.get("/", getTripAgencies)
-hotelRouter.get('/:id', getTripAgencyById)
-hotelRouter.post('/', createTripAgency)
-hotelRouter.patch('/:id', updateTripAgency)
-hotelRouter.delete('/:id', deleteTripAgency)
-module.exports=TripAgencyRouter
+tripAgencyRouter.get('/',tripAgencyController.index);
+tripAgencyRouter.get('/:id',tripAgencyController.get);
+tripAgencyRouter.post('/',tripAgencyController.create);
+tripAgencyRouter.put('/:id',tripAgencyController.update);
+tripAgencyRouter.delete('/:id',tripAgencyController.delete);
+
+
+//for login in the trip agency we create endpoints as 
+hotelRouter.post('/login',tripAgencyController.login);
+
+module.exports = tripAgencyRouter;

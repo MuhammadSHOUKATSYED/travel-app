@@ -2,6 +2,11 @@
 const mongoose = require("mongoose");
 const hotels=require('./hotelSchema')
 const UploadSchema = mongoose.schema({
+  id:{
+    type:String,
+    required:true,
+    unique:true,
+},
   fileName: {
     type: String,
     required: true,

@@ -2,6 +2,11 @@ const mongoose=require('mongoose')
 const tripAgency=require('./tripAgencySchema')
 const users=require('../userModel/userSchema')
 const reviewSchema=new mongoose.schema({
+    id:{
+        type:String,
+        required:true,
+        unique:true,
+    },
     opponion:{
         type:String,
         required: false,

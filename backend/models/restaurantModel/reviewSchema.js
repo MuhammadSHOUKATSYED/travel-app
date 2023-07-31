@@ -2,6 +2,11 @@ const mongoose=require('mongoose')
 const restaurants=require('./restaurantSchema')
 const users=require('../userModel/userSchema')
 const reviewSchema=new restaurantSchema({
+    id:{
+        type:String,
+        required:true,
+        unique:true,
+    },
     opponion:{
         type:String,
         required: false,
@@ -18,7 +23,7 @@ const reviewSchema=new restaurantSchema({
     },
     restaurant:{
         type:schema.Types.ObjectId,
-        ref:restaurant.collection.name
+        ref:restaurants.collection.name
     }
     
 })

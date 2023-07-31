@@ -2,6 +2,11 @@
 const mongoose = require("mongoose");
 const restaurants=require('./restaurantSchema')
 const UploadSchema = new restaurantSchema({
+  id:{
+    type:String,
+    required:true,
+    unique:true,
+},
   fileName: {
     type: String,
     required: true,

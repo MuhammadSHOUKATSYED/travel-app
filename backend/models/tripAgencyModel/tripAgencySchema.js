@@ -2,6 +2,11 @@ const mongoose = require('mongoose');
 const images = require('./uploadSchema');
 const reviews = require('./reviewSchema');
 const tripAgencySchema = new mongoose.Schema({
+    id:{
+        type:String,
+        required:true,
+        unique:true,
+    },
     name: {
         type: String,
         required: true,
@@ -12,16 +17,16 @@ const tripAgencySchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
+    password:{
+        type:String,
+        required:true,
+    },
     images: [
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: images.collection.name,
         },
     ],
-    location: {
-        type: String,
-        required: true,
-    },
     description: {
         type: String,
         required: true,

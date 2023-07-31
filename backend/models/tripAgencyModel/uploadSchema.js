@@ -3,6 +3,11 @@ const mongoose = require("mongoose");
 const tripAgency=require('./tripAgencySchema')
 const schema=mongoose.schema
 const UploadSchema = new schema({
+  id:{
+    type:String,
+    required:true,
+    unique:true,
+},
   fileName: {
     type: String,
     required: true,
