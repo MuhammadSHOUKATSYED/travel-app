@@ -77,7 +77,7 @@ static delete = async (req, res, next) =>{
 }
 static get = async (req, res, next) =>{
     try {
-        findRecord = await ForumModel.findOne({ questionId: req.params.questionId })
+        findRecord = await ForumModel.findOne({ questionId: req.params.questionId })    
         if(findRecord){
             const forum = await ForumModel.findById(findRecord._id);
             res.json(forum);
