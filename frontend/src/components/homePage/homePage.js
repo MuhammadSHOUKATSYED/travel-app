@@ -1,6 +1,5 @@
-// components/HomePage.js
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 import DestinationCard from './destinationCard';
 import FeaturedArticleCard from './featuredArticleCard';
 import heroImage from '../../assets/images/homePage.jpg';
@@ -35,6 +34,7 @@ const featuredArticleData = {
 const HomePage = () => {
   return (
     <div className="home-page">
+        
       <div className="hero-section">
         <img src={heroImage} alt="Hero" className="hero-image" />
         <div className="hero-content">
@@ -56,6 +56,12 @@ const HomePage = () => {
         <h2>Featured Article</h2>
         <FeaturedArticleCard article={featuredArticleData} />
       </div>
+      <Link to="/login">
+          <button>Login</button>
+        </Link>
+        <Link to="/signup">
+          <button>Signup</button>
+          </Link>
     </div>
   );
 };
