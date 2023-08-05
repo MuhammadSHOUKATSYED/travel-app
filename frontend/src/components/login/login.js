@@ -10,9 +10,7 @@ const Login = () => {
   };
 
   const handleLogin = () => {
-    // Handle login based on selectedUserType and user credentials
   };
-
   return (
     <div>
       <h2>Login</h2>

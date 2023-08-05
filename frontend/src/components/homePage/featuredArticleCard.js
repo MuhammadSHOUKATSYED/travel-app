@@ -1,7 +1,4 @@
-// components/FeaturedArticleCard.js
-
 import React from 'react';
-
 const FeaturedArticleCard = ({ article }) => {
   return (
     <div className="featured-article-card">
