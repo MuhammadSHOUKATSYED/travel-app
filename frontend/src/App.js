@@ -1,24 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Routes, Route } from 'react-router-dom';
-=======
 import { BrowserRouter, Router, Route } from 'react-router-dom';
->>>>>>> b10bc6b536a05461549c54a1eca5e570a112472c
-import HomePage from './components/homePage/homePage';
-import Login from './components/login/login'
-import SignUp from './components/login/SignUp'
-
 const App = () => {
   return (
-<<<<<<< HEAD
-    <Routes>
-    component={<HomePage/>}
-    <Route path="/" component={<HomePage/>}/>
-    <Route path="/login" component={<Login/>}/>
-  <Route path="/signup" component={<SignUp/>}/>
-</Routes>
-  )}
-=======
     <BrowserRouter>
     <Router>
       <Route path = "/" element =  {<HomePage/>} />
@@ -102,6 +85,4 @@ const App = () => {
     </BrowserRouter>
   );
 };
-
->>>>>>> b10bc6b536a05461549c54a1eca5e570a112472c
 export default App;
