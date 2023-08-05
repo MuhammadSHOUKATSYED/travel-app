@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import DestinationCard from './destinationCard';
 import FeaturedArticleCard from './featuredArticleCard';
 import heroImage from '../../assets/images/homePage.jpg';
-import '../homePage/homePageStyles.css'
+import './homePageStyles.css'
 const popularDestinationsData = [
   {
     id: 1,
