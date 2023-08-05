@@ -9,78 +9,78 @@ const App = () => {
       <Route path = "/login" element =  {<loginPage/>} />
       <Route path = "/signUp" element =  {<signUpPage/>} />
       <Route path = "/admin" element =  {<AdminHome/>}>
-        <Route path = "/admin/viewProfileInformation" element = {<viewAdminProfile/>}/>
-        <Route path = "/admin/editProfileInformation" element = {<AdminEditProfile/>}/>
-        <Route path = "/admin/viewForums" element = {<ViewForums/>}/>
-        <Route path = "/admin/viewTripAgencies" element = {<ViewTripAgencies/>}/>
-        <Route path = "/admin/viewUsers" element = {<ViewUsers/>}/>
-        <Route path = "/admin/viewHotels" element = {<ViewHotels/>}/>
-        <Route path = "/admin/viewRestaurants" element = {<ViewRestaurants/>}/>
-        <Route path = "/admin/addForum" element = {<AddForum/>}/>
-        <Route path = "/admin/deleteForum" element = {<deleteForum/>}/>
-        <Route path = "/admin/addUser" element = {<addUser/>}/>
-        <Route path = "/admin/deleteUser" element = {<deleteUser/>}/>
-        <Route path = "/admin/addTripAgency" element = {<addTripAgency/>}/>
-        <Route path = "/admin/deleteTripAgency" element = {<deleteTripAgency/>}/>
-        <Route path = "/admin/addHotel" element = {<addHotel/>}/>
-        <Route path = "/admin/deleteHotel" element = {<deleteHotel/>}/>
-        <Route path = "/admin/addRestaurant" element = {<addRestaurant/>}/>
-        <Route path = "/admin/deleteRestaurant" element = {<deleteRestaurant/>}/>
+        <Route path = "/viewProfileInformation" element = {<viewAdminProfile/>}/>
+        <Route path = "/editProfileInformation" element = {<AdminEditProfile/>}/>
+        <Route path = "/viewForums" element = {<ViewForums/>}/>
+        <Route path = "/viewTripAgencies" element = {<ViewTripAgencies/>}/>
+        <Route path = "/viewUsers" element = {<ViewUsers/>}/>
+        <Route path = "/viewHotels" element = {<ViewHotels/>}/>
+        <Route path = "/viewRestaurants" element = {<ViewRestaurants/>}/>
+        <Route path = "/addForum" element = {<AddForum/>}/>
+        <Route path = "/deleteForum" element = {<deleteForum/>}/>
+        <Route path = "/addUser" element = {<addUser/>}/>
+        <Route path = "/deleteUser" element = {<deleteUser/>}/>
+        <Route path = "/addTripAgency" element = {<addTripAgency/>}/>
+        <Route path = "/deleteTripAgency" element = {<deleteTripAgency/>}/>
+        <Route path = "/addHotel" element = {<addHotel/>}/>
+        <Route path = "/deleteHotel" element = {<deleteHotel/>}/>
+        <Route path = "/addRestaurant" element = {<addRestaurant/>}/>
+        <Route path = "/deleteRestaurant" element = {<deleteRestaurant/>}/>
       </Route>
       <Route path = "/superAdmin" element =  {<SuperAdminHome/>}>
-        <Route path = "/superAdmin/viewAdmins" element = {<viewAdmins/>}/>
-        <Route path = "/superAdmin/addAdmin" element = {<addAdmin/>}/>
-        <Route path = "/superAdmin/deleteAdmin" element = {<deleteAdmin/>}/>
-        <Route path = "/superAdmin/viewForums" element = {<ViewForums/>}/>
-        <Route path = "/superAdmin/viewUsers" element = {<ViewUsers/>}/>
-        <Route path = "/superAdmin/vieHotels" element = {<ViewHotels/>}/>
-        <Route path = "/superAdmin/viewRestaurants" element = {<ViewRestaurants/>}/>
-        <Route path = "/superAdmin/viewTripAgencies" element = {<ViewTripAgencies/>}/>
+        <Route path = "/viewAdmins" element = {<viewAdmins/>}/>
+        <Route path = "/addAdmin" element = {<addAdmin/>}/>
+        <Route path = "/deleteAdmin" element = {<deleteAdmin/>}/>
+        <Route path = "/viewForums" element = {<ViewForums/>}/>
+        <Route path = "/viewUsers" element = {<ViewUsers/>}/>
+        <Route path = "/vieHotels" element = {<ViewHotels/>}/>
+        <Route path = "/viewRestaurants" element = {<ViewRestaurants/>}/>
+        <Route path = "/viewTripAgencies" element = {<ViewTripAgencies/>}/>
       </Route>
-      <Route path = "/user" element =  {<HomePage/>}>
-        <Route path = "/user/viewProfileInformation" element = {<viewUserProfile/>}/>
-        <Route path = "/user/editProfileInformation" element = {<editUserProfile/>}/>
-        <Route path = "/user/viewTripAgencies" element = {<viewTripAgencies/>}/>
-        <Route path = "/user/viewHotels" element = {<viewHotels/>}/>
-        <Route path = "/user/viewRestaurants" element = {<viewRestaurants/>}/>
-        <Route path = "/user/viewForums" element = {<viewForums/>}/>
-        <Route path = "/user/addForum" element = {<addMyForum/>}/>
-        <Route path = "/user/deleteForum" element = {<deleteMyForum/>}/>
+      <Route path = "/user" element =  {<UserHome/>}>
+        <Route path = "/viewProfileInformation" element = {<viewUserProfile/>}/>
+        <Route path = "/editProfileInformation" element = {<editUserProfile/>}/>
+        <Route path = "/viewTripAgencies" element = {<viewTripAgencies/>}/>
+        <Route path = "/viewHotels" element = {<viewHotels/>}/>
+        <Route path = "/viewRestaurants" element = {<viewRestaurants/>}/>
+        <Route path = "/viewForums" element = {<viewForums/>}/>
+        <Route path = "/addForum" element = {<addMyForum/>}/>
+        <Route path = "/deleteForum" element = {<deleteMyForum/>}/>
       </Route>
       <Route path = "/tripAgency" element =  {<TripAgencyPage/>}>
-        <Route path = "/tripAgency/viewProfileInformation" element = {<viewTripAgencyProfile/>}/>
-        <Route path = "/tripAgency/editProfileInformation" element = {<editTripAgencyProfile/>}/>
-        <Route path = "/tripAgency/viewForums" element = {<viewForums/>}/>
-        <Route path = "/superAdmin/viewUsers" element = {<ViewUsers/>}/>
-        <Route path = "/superAdmin/viewHotels" element = {<ViewHotels/>}/>
-        <Route path = "/superAdmin/viewRestaurants" element = {<ViewRestaurants/>}/>
+        <Route path = "/viewProfileInformation" element = {<viewTripAgencyProfile/>}/>
+        <Route path = "/editProfileInformation" element = {<editTripAgencyProfile/>}/>
+        <Route path = "/viewForums" element = {<viewForums/>}/>
+        <Route path = "/viewUsers" element = {<ViewUsers/>}/>
+        <Route path = "/viewHotels" element = {<ViewHotels/>}/>
+        <Route path = "/viewRestaurants" element = {<ViewRestaurants/>}/>
         <Route path = "/superAdmin/viewTripAgencies" element = {<ViewTripAgencies/>}/>
       </Route>
       <Route path = "/restaurant" element =  {<RestaurantPage/>}>
-        <Route path = "/restaurant/viewProfileInformation" element = {<viewRestaurantProfile/>}/>
-        <Route path = "/restaurant/editProfileInformation" element = {<editRestaurantProfile/>}/>
-        <Route path = "/restaurant/viewForums" element = {<viewForums/>}/>
-        <Route path = "/restaurant/viewUsers" element = {<ViewUsers/>}/>
-        <Route path = "/restaurant/viewHotels" element = {<ViewHotels/>}/>
-        <Route path = "/restaurant/viewRestaurants" element = {<ViewRestaurants/>}/>
-        <Route path = "/restaurant/viewTripAgencies" element = {<ViewTripAgencies/>}/>
+        <Route path = "/viewProfileInformation" element = {<viewRestaurantProfile/>}/>
+        <Route path = "/editProfileInformation" element = {<editRestaurantProfile/>}/>
+        <Route path = "/viewForums" element = {<viewForums/>}/>
+        <Route path = "/viewUsers" element = {<ViewUsers/>}/>
+        <Route path = "/viewHotels" element = {<ViewHotels/>}/>
+        <Route path = "/viewRestaurants" element = {<ViewRestaurants/>}/>
+        <Route path = "/viewTripAgencies" element = {<ViewTripAgencies/>}/>
       </Route>
       <Route path = "/hotel" element =  {<HotelPage/>}>
-        <Route path = "/hotel/viewProfileInformation" element = {<viewHotelProfile/>}/>
-        <Route path = "/hotel/editProfileInformation" element = {<editHotelProfile/>}/>
-        <Route path = "/hotel/viewForums" element = {<viewForums/>}/>
-        <Route path = "/hotel/viewUsers" element = {<ViewUsers/>}/>
-        <Route path = "/hotel/viewHotels" element = {<ViewHotels/>}/>
-        <Route path = "/hotel/viewRestaurants" element = {<ViewRestaurants/>}/>
-        <Route path = "/hotel/viewTripAgencies" element = {<ViewTripAgencies/>}/>
+        <Route path = "/viewProfileInformation" element = {<viewHotelProfile/>}/>
+        <Route path = "/editProfileInformation" element = {<editHotelProfile/>}/>
+        <Route path = "/viewForums" element = {<viewForums/>}/>
+        <Route path = "/viewUsers" element = {<ViewUsers/>}/>
+        <Route path = "/viewHotels" element = {<ViewHotels/>}/>
+        <Route path = "/viewRestaurants" element = {<ViewRestaurants/>}/>
+        <Route path = "/viewTripAgencies" element = {<ViewTripAgencies/>}/>
       </Route>
       <Route path = "/contentWriter" element = {<ContentWriterPage/>}>
-        <Route path = "/contentWriter/viewProfileInformation" element = {<viewContentWriterProfile/>}/>
-        <Route path = "/contentWriter/editProfileInformation" element = {<editContentWriterProfile/>}/>
-        <Route path = "/contentWriter/viewForums" element = {<viewForums/>}/>
-        <Route path = "/contentWriter/viewMyArticles" element = {<viewMyArticles/>}/>
-        <Route path = "/contentWriter/addArticle" element = {<addMyArticle/>}/>
-        <Route path = "/contentWriter/deleteArticle" element = {<deleteMyArticle/>}/>
+        <Route path = "/viewProfileInformation" element = {<viewContentWriterProfile/>}/>
+        <Route path = "/editProfileInformation" element = {<editContentWriterProfile/>}/>
+        <Route path = "/viewForums" element = {<viewForums/>}/>
+        <Route path = "/viewMyArticles" element = {<viewMyArticles/>}/>
+        <Route path = "/addArticle" element = {<addMyArticle/>}/>
+        <Route path = "/deleteArticle" element = {<deleteMyArticle/>}/>
       </Route>
     </Router>
     </BrowserRouter>
