@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import SuperAdminHome from './dashboards/superAdmin/pages/SuperAdminHome';
 import SuperAdminLayout from './dashboards/superAdmin/pages/SuperAdminLayout';
@@ -46,92 +46,94 @@ import HotelHome from './dashboards/hotel/pages/HotelHome';
 import HotelLayout from './dashboards/hotel/pages/HotelLayout';
 import ViewHotelProfile from './dashboards/hotel/pages/ViewHotelProfile';
 import EditHotelProfile from './dashboards/hotel/pages/EditHotelProfile';
+import HomePage from './components/HomePage'
 const App = () => {
   return (
     <BrowserRouter>
-     <Routes>
-        <Route path = "/superAdmin" element =  {<SuperAdminLayout/>}>
-        <Route index element =  {<SuperAdminHome/>} />
-        <Route path = "/superAdmin/viewAdmins" element = {<ViewAdmins/>}/>
-        <Route path = "/superAdmin/addAdmin" element = {<AddAdmin/>}/>
-        <Route path = "/superAdmin/deleteAdmin" element = {<DeleteAdmin/>}/>
-        <Route path = "/superAdmin/viewForums" element = {<ViewForums/>}/>
-        <Route path = "/superAdmin/viewUsers" element = {<ViewUsers/>}/>
-        <Route path = "/superAdmin/viewHotels" element = {<ViewHotels/>}/>
-        <Route path = "/superAdmin/viewRestaurants" element = {<ViewRestaurants/>}/>
-        <Route path = "/superAdmin/viewTripAgencies" element = {<ViewTripAgencies/>}/>
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/superAdmin" element={<SuperAdminLayout />}>
+          <Route index element={<SuperAdminHome />} />
+          <Route path="/superAdmin/viewAdmins" element={<ViewAdmins />} />
+          <Route path="/superAdmin/addAdmin" element={<AddAdmin />} />
+          <Route path="/superAdmin/deleteAdmin" element={<DeleteAdmin />} />
+          <Route path="/superAdmin/viewForums" element={<ViewForums />} />
+          <Route path="/superAdmin/viewUsers" element={<ViewUsers />} />
+          <Route path="/superAdmin/viewHotels" element={<ViewHotels />} />
+          <Route path="/superAdmin/viewRestaurants" element={<ViewRestaurants />} />
+          <Route path="/superAdmin/viewTripAgencies" element={<ViewTripAgencies />} />
         </Route>
-        <Route path = "/admin" element =  {<AdminHome/>}>
-        <Route path = "/admin/viewProfileInformation" element = {<ViewAdminProfile/>}/>
-        <Route path = "/admin/editProfileInformation" element = {<AdminEditProfile/>}/>
-        <Route path = "/admin/viewForums" element = {<ViewForums/>}/>
-        <Route path = "/admin/viewTripAgencies" element = {<ViewTripAgencies/>}/>
-        <Route path = "/admin/viewUsers" element = {<ViewUsers/>}/>
-        <Route path = "/admin/viewHotels" element = {<ViewHotels/>}/>
-        <Route path = "/admin/viewRestaurants" element = {<ViewRestaurants/>}/>
-        <Route path = "/admin/addForum" element = {<AddForum/>}/>
-        <Route path = "/admin/deleteForum" element = {<DeleteForum/>}/>
-        <Route path = "/admin/addUser" element = {<AddUser/>}/>
-        <Route path = "/admin/deleteUser" element = {<DeleteUser/>}/>
-        <Route path = "/admin/addTripAgency" element = {<AddTripAgency/>}/>
-        <Route path = "/admin/deleteTripAgency" element = {<DeleteTripAgency/>}/>
-        <Route path = "/admin/addHotel" element = {<AddHotel/>}/>
-        <Route path = "/admin/deleteHotel" element = {<DeleteHotel/>}/>
-        <Route path = "/admin/addRestaurant" element = {<AddRestaurant/>}/>
-        <Route path = "/admin/deleteRestaurant" element = {<DeleteRestaurant/>}/>
-      </Route>
-      <Route path = "/user" element =  {<UserHome/>}>
-        <Route path = "/user/viewProfileInformation" element = {<ViewUserProfile/>}/>
-        <Route path = "/user/editProfileInformation" element = {<EditUserProfile/>}/>
-        <Route path = "/user/viewTripAgencies" element = {<ViewTripAgencies/>}/>
-        <Route path = "/user/viewHotels" element = {<ViewHotels/>}/>
-        <Route path = "/user/viewRestaurants" element = {<ViewRestaurants/>}/>
-        <Route path = "/user/viewForums" element = {<ViewForums/>}/>
-        <Route path = "/user/addForum" element = {<AddMyForum/>}/>
-        <Route path = "/user/deleteForum" element = {<DeleteMyForum/>}/>
-      </Route>
-      <Route path = "/contentWriter" element = {<ContentWriterHome/>}>
-        <Route path = "/contentWriter/viewProfileInformation" element = {<ViewWriterProfile/>}/>
-        <Route path = "/contentWriter/editProfileInformation" element = {<EditWriterProfile/>}/>
-        <Route path = "/contentWriter/viewForums" element = {<ViewForums/>}/>
-        <Route path = "/contentWriter/viewTripAgencies" element = {<ViewTripAgencies/>}/>
-        <Route path = "/contentWriter/viewHotels" element = {<ViewHotels/>}/>
-        <Route path = "/contentWriter/viewRestaurants" element = {<ViewRestaurants/>}/>
-        <Route path = "/contentWriter/viewMyArticles" element = {<ViewMyArticles/>}/>
-        <Route path = "/contentWriter/addArticle" element = {<AddMyArticle/>}/>
-        <Route path = "/contentWriter/deleteArticle" element = {<DeleteMyArticle/>}/>
-      </Route>
-      <Route path = "/tripAgency" element =  {<TripAgencyLayout/>}>
-        <Route index element =  {<TripAgencyHome/>} />
-        <Route path = "/tripAgency/viewProfileInformation" element = {<ViewTripAgencyProfile/>}/>
-        <Route path = "/tripAgency/editProfileInformation" element = {<EditTripAgencyProfile/>}/>
-        <Route path = "/tripAgency/viewForums" element = {<ViewForums/>}/>
-        <Route path = "/tripAgency/viewUsers" element = {<ViewUsers/>}/>
-        <Route path = "/tripAgency/viewHotels" element = {<ViewHotels/>}/>
-        <Route path = "/tripAgency/viewRestaurants" element = {<ViewRestaurants/>}/>
-        <Route path = "/tripAgency/viewTripAgencies" element = {<ViewTripAgencies/>}/>
-      </Route>
-      <Route path = "/restaurant" element =  {<RestaurantLayout/>}>
-        <Route index element = {<RestaurantHome/>} />
-        <Route path = "/restaurant/viewProfileInformation" element = {<ViewRestaurantProfile/>}/>
-        <Route path = "/restaurant/editProfileInformation" element = {<EditRestaurantProfile/>}/>
-        <Route path = "/restaurant/viewForums" element = {<ViewForums/>}/>
-        <Route path = "/restaurant/viewUsers" element = {<ViewUsers/>}/>
-        <Route path = "/restaurant/viewHotels" element = {<ViewHotels/>}/>
-        <Route path = "/restaurant/viewRestaurants" element = {<ViewRestaurants/>}/>
-        <Route path = "/restaurant/viewTripAgencies" element = {<ViewTripAgencies/>}/>
-      </Route>
-      <Route path = "/hotel" element =  {<HotelLayout/>}>
-        <Route index element =  {<HotelHome />} />
-        <Route path = "/hotel/viewProfileInformation" element = {<ViewHotelProfile/>}/>
-        <Route path = "/hotel/editProfileInformation" element = {<EditHotelProfile/>}/>
-        <Route path = "/hotel/viewForums" element = {<ViewForums/>}/>
-        <Route path = "/hotel/viewUsers" element = {<ViewUsers/>}/>
-        <Route path = "/hotel/viewHotels" element = {<ViewHotels/>}/>
-        <Route path = "/hotel/viewRestaurants" element = {<ViewRestaurants/>}/>
-        <Route path = "/hotel/viewTripAgencies" element = {<ViewTripAgencies/>}/>
-      </Route>
-    </Routes>
+        <Route path="/admin" element={<AdminHome />}>
+          <Route path="/admin/viewProfileInformation" element={<ViewAdminProfile />} />
+          <Route path="/admin/editProfileInformation" element={<AdminEditProfile />} />
+          <Route path="/admin/viewForums" element={<ViewForums />} />
+          <Route path="/admin/viewTripAgencies" element={<ViewTripAgencies />} />
+          <Route path="/admin/viewUsers" element={<ViewUsers />} />
+          <Route path="/admin/viewHotels" element={<ViewHotels />} />
+          <Route path="/admin/viewRestaurants" element={<ViewRestaurants />} />
+          <Route path="/admin/addForum" element={<AddForum />} />
+          <Route path="/admin/deleteForum" element={<DeleteForum />} />
+          <Route path="/admin/addUser" element={<AddUser />} />
+          <Route path="/admin/deleteUser" element={<DeleteUser />} />
+          <Route path="/admin/addTripAgency" element={<AddTripAgency />} />
+          <Route path="/admin/deleteTripAgency" element={<DeleteTripAgency />} />
+          <Route path="/admin/addHotel" element={<AddHotel />} />
+          <Route path="/admin/deleteHotel" element={<DeleteHotel />} />
+          <Route path="/admin/addRestaurant" element={<AddRestaurant />} />
+          <Route path="/admin/deleteRestaurant" element={<DeleteRestaurant />} />
+        </Route>
+        <Route path="/user" element={<UserHome />}>
+          <Route path="/user/viewProfileInformation" element={<ViewUserProfile />} />
+          <Route path="/user/editProfileInformation" element={<EditUserProfile />} />
+          <Route path="/user/viewTripAgencies" element={<ViewTripAgencies />} />
+          <Route path="/user/viewHotels" element={<ViewHotels />} />
+          <Route path="/user/viewRestaurants" element={<ViewRestaurants />} />
+          <Route path="/user/viewForums" element={<ViewForums />} />
+          <Route path="/user/addForum" element={<AddMyForum />} />
+          <Route path="/user/deleteForum" element={<DeleteMyForum />} />
+        </Route>
+        <Route path="/contentWriter" element={<ContentWriterHome />}>
+          <Route path="/contentWriter/viewProfileInformation" element={<ViewWriterProfile />} />
+          <Route path="/contentWriter/editProfileInformation" element={<EditWriterProfile />} />
+          <Route path="/contentWriter/viewForums" element={<ViewForums />} />
+          <Route path="/contentWriter/viewTripAgencies" element={<ViewTripAgencies />} />
+          <Route path="/contentWriter/viewHotels" element={<ViewHotels />} />
+          <Route path="/contentWriter/viewRestaurants" element={<ViewRestaurants />} />
+          <Route path="/contentWriter/viewMyArticles" element={<ViewMyArticles />} />
+          <Route path="/contentWriter/addArticle" element={<AddMyArticle />} />
+          <Route path="/contentWriter/deleteArticle" element={<DeleteMyArticle />} />
+        </Route>
+        <Route path="/tripAgency" element={<TripAgencyLayout />}>
+          <Route index element={<TripAgencyHome />} />
+          <Route path="/tripAgency/viewProfileInformation" element={<ViewTripAgencyProfile />} />
+          <Route path="/tripAgency/editProfileInformation" element={<EditTripAgencyProfile />} />
+          <Route path="/tripAgency/viewForums" element={<ViewForums />} />
+          <Route path="/tripAgency/viewUsers" element={<ViewUsers />} />
+          <Route path="/tripAgency/viewHotels" element={<ViewHotels />} />
+          <Route path="/tripAgency/viewRestaurants" element={<ViewRestaurants />} />
+          <Route path="/tripAgency/viewTripAgencies" element={<ViewTripAgencies />} />
+        </Route>
+        <Route path="/restaurant" element={<RestaurantLayout />}>
+          <Route index element={<RestaurantHome />} />
+          <Route path="/restaurant/viewProfileInformation" element={<ViewRestaurantProfile />} />
+          <Route path="/restaurant/editProfileInformation" element={<EditRestaurantProfile />} />
+          <Route path="/restaurant/viewForums" element={<ViewForums />} />
+          <Route path="/restaurant/viewUsers" element={<ViewUsers />} />
+          <Route path="/restaurant/viewHotels" element={<ViewHotels />} />
+          <Route path="/restaurant/viewRestaurants" element={<ViewRestaurants />} />
+          <Route path="/restaurant/viewTripAgencies" element={<ViewTripAgencies />} />
+        </Route>
+        <Route path="/hotel" element={<HotelLayout />}>
+          <Route index element={<HotelHome />} />
+          <Route path="/hotel/viewProfileInformation" element={<ViewHotelProfile />} />
+          <Route path="/hotel/editProfileInformation" element={<EditHotelProfile />} />
+          <Route path="/hotel/viewForums" element={<ViewForums />} />
+          <Route path="/hotel/viewUsers" element={<ViewUsers />} />
+          <Route path="/hotel/viewHotels" element={<ViewHotels />} />
+          <Route path="/hotel/viewRestaurants" element={<ViewRestaurants />} />
+          <Route path="/hotel/viewTripAgencies" element={<ViewTripAgencies />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   )
 }

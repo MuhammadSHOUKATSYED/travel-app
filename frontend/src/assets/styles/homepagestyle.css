@@ -1,0 +1,22 @@
+.carousel-container {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden; /* Hide overflow to avoid scrolling */
+}
+
+.carousel-inner {
+  transition: transform 1s ease-in-out; /* Animation duration and easing */
+  display: flex; /* Display images in a row */
+  width: 500%; /* Set the width to accommodate all images */
+}
+
+.carousel-item {
+  flex-shrink: 0; /* Prevent images from shrinking */
+  width: 20%; /* Set width for each individual image */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.carousel-item img {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain image aspect ratio */
+}
