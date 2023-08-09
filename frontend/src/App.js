@@ -47,6 +47,7 @@ import HotelLayout from './dashboards/hotel/pages/HotelLayout';
 import ViewHotelProfile from './dashboards/hotel/pages/ViewHotelProfile';
 import EditHotelProfile from './dashboards/hotel/pages/EditHotelProfile';
 import HomePage from './components/HomePage'
+import Login from './dashboards/user/pages/Login'
 const App = () => {
   return (
     <BrowserRouter>
@@ -82,15 +83,18 @@ const App = () => {
           <Route path="/admin/addRestaurant" element={<AddRestaurant />} />
           <Route path="/admin/deleteRestaurant" element={<DeleteRestaurant />} />
         </Route>
+        {/* for the signup of the user*/}
         <Route path="/user" element={<UserHome />}>
-          <Route path="/user/viewProfileInformation" element={<ViewUserProfile />} />
-          <Route path="/user/editProfileInformation" element={<EditUserProfile />} />
-          <Route path="/user/viewTripAgencies" element={<ViewTripAgencies />} />
-          <Route path="/user/viewHotels" element={<ViewHotels />} />
-          <Route path="/user/viewRestaurants" element={<ViewRestaurants />} />
-          <Route path="/user/viewForums" element={<ViewForums />} />
-          <Route path="/user/addForum" element={<AddMyForum />} />
-          <Route path="/user/deleteForum" element={<DeleteMyForum />} />
+          <Route path="/user/login" element={<Login/>}>
+          <Route path="/user/login/viewProfileInformation" element={<ViewUserProfile />} />
+          <Route path="/user/login/editProfileInformation" element={<EditUserProfile />} />
+          <Route path="/user/login/viewTripAgencies" element={<ViewTripAgencies />} />
+          <Route path="/user/login/viewHotels" element={<ViewHotels />} />
+          <Route path="/user/login/viewRestaurants" element={<ViewRestaurants />} />
+          <Route path="/user/login/viewForums" element={<ViewForums />} />
+          <Route path="/user/login/addForum" element={<AddMyForum />} />
+          <Route path="/user/login/deleteForum" element={<DeleteMyForum />} />
+          </Route>
         </Route>
         <Route path="/contentWriter" element={<ContentWriterHome />}>
           <Route path="/contentWriter/viewProfileInformation" element={<ViewWriterProfile />} />
