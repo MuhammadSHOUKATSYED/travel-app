@@ -47,7 +47,7 @@ const Login = () => {
 
 const authenticateUser = (username, password) => {
   // Logic to authenticate the user
-  //
+  //1
 
   // Return the user's role (e.g., 'admin', 'user', 'hotel', etc.)
   return userRole;
