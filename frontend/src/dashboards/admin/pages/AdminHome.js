@@ -17,7 +17,7 @@ function AdminHome() {
                   <Link to="/admin/editProfileInformation">Edit Profile Information</Link>
                   </li>
                   <li className="navbar-item">
-                  <Link to="/admin/adminViewForums">View Forums</Link>
+                  <Link to="/admin/viewForums">View Forums</Link>
                   </li>
                   <li className="navbar-item">
                   <Link to="/admin/viewTripAgencies">View Trip Agencies</Link>

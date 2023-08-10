@@ -46,15 +46,14 @@ import HotelHome from './dashboards/hotel/pages/HotelHome';
 import HotelLayout from './dashboards/hotel/pages/HotelLayout';
 import ViewHotelProfile from './dashboards/hotel/pages/ViewHotelProfile';
 import EditHotelProfile from './dashboards/hotel/pages/EditHotelProfile';
-import HomePage from './components/HomePage'
-import Login from './dashboards/user/pages/Login'
-import Signup from './dashboards/user/pages/signUp'
-import OwnersLogin from './dashboards/hotel/pages/HotelLogin'
+import HomePage from './components/HomePage';
+import UserLayout from './dashboards/user/pages/UserLayout';
+import ViewArticles from './components/ViewArticles';
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />}/>
+        <Route path="/" element={<HomePage />} />
         <Route path="/superAdmin" element={<SuperAdminLayout />}>
           <Route index element={<SuperAdminHome />} />
           <Route path="/superAdmin/viewAdmins" element={<ViewAdmins />} />
@@ -85,19 +84,18 @@ const App = () => {
           <Route path="/admin/addRestaurant" element={<AddRestaurant />} />
           <Route path="/admin/deleteRestaurant" element={<DeleteRestaurant />} />
         </Route>
-        {/* for the signup of the user*/}
-          
-          <Route path="/user" element={<UserHome />}/>
-          <Route exact path="/user/login" element={<Login/>}/>
-          <Route path="/user/signup" element={<Signup/>}/>
-          <Route path="/user/login/viewProfileInformation" element={<ViewUserProfile />} />
-          <Route path="/user/login/editProfileInformation" element={<EditUserProfile />} />
-          <Route path="/user/login/viewTripAgencies" element={<ViewTripAgencies />} />
-          <Route path="/user/login/viewHotels" element={<ViewHotels />} />
-          <Route path="/user/login/viewRestaurants" element={<ViewRestaurants />} />
-          <Route path="/user/login/viewForums" element={<ViewForums />} />
-          <Route path="/user/login/addForum" element={<AddMyForum />} />
-          <Route path="/user/login/deleteForum" element={<DeleteMyForum />} />
+        <Route path="/user" element={<UserLayout />}>
+          <Route index element={<UserHome />} />
+          <Route path="/user/viewProfileInformation" element={<ViewUserProfile />} />
+          <Route path="/user/editProfileInformation" element={<EditUserProfile />} />
+          <Route path="/user/viewTripAgencies" element={<ViewTripAgencies />} />
+          <Route path="/user/viewHotels" element={<ViewHotels />} />
+          <Route path="/user/viewRestaurants" element={<ViewRestaurants />} />
+          <Route path = "/user/viewArticles" element = {<ViewArticles />} />
+          <Route path="/user/viewForums" element={<ViewForums />} />
+          <Route path="/user/addForum" element={<AddMyForum />} />
+          <Route path="/user/deleteForum" element={<DeleteMyForum />} />
+        </Route>
         <Route path="/contentWriter" element={<ContentWriterHome />}>
           <Route path="/contentWriter/viewProfileInformation" element={<ViewWriterProfile />} />
           <Route path="/contentWriter/editProfileInformation" element={<EditWriterProfile />} />
@@ -129,16 +127,16 @@ const App = () => {
           <Route path="/restaurant/viewRestaurants" element={<ViewRestaurants />} />
           <Route path="/restaurant/viewTripAgencies" element={<ViewTripAgencies />} />
         </Route>
-          <Route path="/hotel" element={<HotelHome />} />
-          <Route path="/hotel/login" element={<OwnersLogin/>}/>
-          <Route path="/hotel/login" element={<Login/>}/>
-          <Route path="/hotel/login/viewProfileInformation" element={<ViewHotelProfile />} />
-          <Route path="/hotel/login/editProfileInformation" element={<EditHotelProfile />} />
-          <Route path="/hotel/login/viewForums" element={<ViewForums />} />
-          <Route path="/hotel/login/viewUsers" element={<ViewUsers />} />
-          <Route path="/hotel/login/viewHotels" element={<ViewHotels />} />
-          <Route path="/hotel/login/viewRestaurants" element={<ViewRestaurants />} />
-          <Route path="/hotel/login/viewTripAgencies" element={<ViewTripAgencies />} />
+        <Route path="/hotel" element={<HotelLayout />}>
+          <Route index element={<HotelHome />} />
+          <Route path="/hotel/viewProfileInformation" element={<ViewHotelProfile />} />
+          <Route path="/hotel/editProfileInformation" element={<EditHotelProfile />} />
+          <Route path="/hotel/viewForums" element={<ViewForums />} />
+          <Route path="/hotel/viewUsers" element={<ViewUsers />} />
+          <Route path="/hotel/viewHotels" element={<ViewHotels />} />
+          <Route path="/hotel/viewRestaurants" element={<ViewRestaurants />} />
+          <Route path="/hotel/viewTripAgencies" element={<ViewTripAgencies />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
