@@ -48,11 +48,13 @@ import ViewHotelProfile from './dashboards/hotel/pages/ViewHotelProfile';
 import EditHotelProfile from './dashboards/hotel/pages/EditHotelProfile';
 import HomePage from './components/HomePage'
 import Login from './dashboards/user/pages/Login'
+import Signup from './dashboards/user/pages/signUp'
+import OwnersLogin from './dashboards/hotel/pages/HotelLogin'
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/" element={<HomePage />}/>
         <Route path="/superAdmin" element={<SuperAdminLayout />}>
           <Route index element={<SuperAdminHome />} />
           <Route path="/superAdmin/viewAdmins" element={<ViewAdmins />} />
@@ -84,8 +86,10 @@ const App = () => {
           <Route path="/admin/deleteRestaurant" element={<DeleteRestaurant />} />
         </Route>
         {/* for the signup of the user*/}
-        <Route path="/user" element={<UserHome />}>
-          <Route path="/user/login" element={<Login/>}>
+          
+          <Route path="/user" element={<UserHome />}/>
+          <Route exact path="/user/login" element={<Login/>}/>
+          <Route path="/user/signup" element={<Signup/>}/>
           <Route path="/user/login/viewProfileInformation" element={<ViewUserProfile />} />
           <Route path="/user/login/editProfileInformation" element={<EditUserProfile />} />
           <Route path="/user/login/viewTripAgencies" element={<ViewTripAgencies />} />
@@ -94,8 +98,6 @@ const App = () => {
           <Route path="/user/login/viewForums" element={<ViewForums />} />
           <Route path="/user/login/addForum" element={<AddMyForum />} />
           <Route path="/user/login/deleteForum" element={<DeleteMyForum />} />
-          </Route>
-        </Route>
         <Route path="/contentWriter" element={<ContentWriterHome />}>
           <Route path="/contentWriter/viewProfileInformation" element={<ViewWriterProfile />} />
           <Route path="/contentWriter/editProfileInformation" element={<EditWriterProfile />} />
@@ -127,16 +129,16 @@ const App = () => {
           <Route path="/restaurant/viewRestaurants" element={<ViewRestaurants />} />
           <Route path="/restaurant/viewTripAgencies" element={<ViewTripAgencies />} />
         </Route>
-        <Route path="/hotel" element={<HotelLayout />}>
-          <Route index element={<HotelHome />} />
-          <Route path="/hotel/viewProfileInformation" element={<ViewHotelProfile />} />
-          <Route path="/hotel/editProfileInformation" element={<EditHotelProfile />} />
-          <Route path="/hotel/viewForums" element={<ViewForums />} />
-          <Route path="/hotel/viewUsers" element={<ViewUsers />} />
-          <Route path="/hotel/viewHotels" element={<ViewHotels />} />
-          <Route path="/hotel/viewRestaurants" element={<ViewRestaurants />} />
-          <Route path="/hotel/viewTripAgencies" element={<ViewTripAgencies />} />
-        </Route>
+          <Route path="/hotel" element={<HotelHome />} />
+          <Route path="/hotel/login" element={<OwnersLogin/>}/>
+          <Route path="/hotel/login" element={<Login/>}/>
+          <Route path="/hotel/login/viewProfileInformation" element={<ViewHotelProfile />} />
+          <Route path="/hotel/login/editProfileInformation" element={<EditHotelProfile />} />
+          <Route path="/hotel/login/viewForums" element={<ViewForums />} />
+          <Route path="/hotel/login/viewUsers" element={<ViewUsers />} />
+          <Route path="/hotel/login/viewHotels" element={<ViewHotels />} />
+          <Route path="/hotel/login/viewRestaurants" element={<ViewRestaurants />} />
+          <Route path="/hotel/login/viewTripAgencies" element={<ViewTripAgencies />} />
       </Routes>
     </BrowserRouter>
   )
