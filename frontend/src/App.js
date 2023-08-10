@@ -46,14 +46,19 @@ import HotelHome from './dashboards/hotel/pages/HotelHome';
 import HotelLayout from './dashboards/hotel/pages/HotelLayout';
 import ViewHotelProfile from './dashboards/hotel/pages/ViewHotelProfile';
 import EditHotelProfile from './dashboards/hotel/pages/EditHotelProfile';
-import HomePage from './components/HomePage';
+import HomePage from './pages/HomePage';
 import UserLayout from './dashboards/user/pages/UserLayout';
 import ViewArticles from './components/ViewArticles';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signUp" element={<SignUp />} />
         <Route path="/superAdmin" element={<SuperAdminLayout />}>
           <Route index element={<SuperAdminHome />} />
           <Route path="/superAdmin/viewAdmins" element={<ViewAdmins />} />

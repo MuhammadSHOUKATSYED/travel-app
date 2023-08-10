@@ -23,7 +23,7 @@ export default function Login() {
                       <form>
                         <div className="d-flex align-items-center mb-3 pb-1">
                           <i className="fas fa-cubes fa-2x me-3" style={{ color: '#ff6219' }}></i>
-                          <span className="h1 fw-bold mb-0">Logo</span>
+                          <span className="h1 fw-bold mb-0">Login</span>
                         </div>
                         <h5 className="fw-normal mb-3 pb-3" style={{ letterSpacing: '1px' }}>Sign into your account</h5>
                         <div className="form-outline mb-4">
@@ -38,7 +38,7 @@ export default function Login() {
                           <button className="btn btn-dark btn-lg btn-block" type="button">Login</button>
                         </div>
                         <Link className="small text-muted" to="/forgetPassword">Forgot password?</Link>
-                        <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>Don't have an account? <Link to="/user/signUp" style={{ color: '#393f81' }}>Register here</Link></p>
+                        <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>Don't have an account? <Link to="/signUp" style={{ color: '#393f81' }}>Register here</Link></p>
                         <Link to="/termsOfUse" className="small text-muted">Terms of use.</Link>
                         <Link to="/privacypolicy" className="small text-muted">Privacy policy</Link>
                       </form>
