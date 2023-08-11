@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const images = require('./uploadSchema')
 const reviews = require('./reviewSchema')
-const hotelSchema = new mongoose.Schema({
+const hotelSchema = new mongoose.schema({
     id:{
         type:String,
         required:true,

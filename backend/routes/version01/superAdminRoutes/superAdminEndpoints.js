@@ -1,15 +1,11 @@
 const express = require('express');
-const tripAgencyRouter = express.Router();
-const tripAgencyController = require('../../../controllers/tripAgencyController/tripAgencyController');
+const superAdminRouter = express.Router();
+const superAdminController= require('../../../controllers/tripAgencyController/tripAgencyController');
 
-tripAgencyRouter.get('/',tripAgencyController.index);
-tripAgencyRouter.get('/:id',tripAgencyController.get);
-tripAgencyRouter.post('/',tripAgencyController.create);
-tripAgencyRouter.put('/:id',tripAgencyController.update);
-tripAgencyRouter.delete('/:id',tripAgencyController.delete);
+superAdminRouter.get('/',tripAgencyController.index);
+superAdminRouter.get('/:id',tripAgencyController.get);
+superAdminRouter.post('/',tripAgencyController.create);
+superAdminRouter.put('/:id',tripAgencyController.update);
+superAdminRouter.delete('/:id',tripAgencyController.delete);
 
-
-//for login in the hotel we create endpoints as 
-tripAgencyRouter.post('/login',tripAgencyController.login);
-
-module.exports = tripAgencyRouter;
+module.exports = superAdminRouter;
