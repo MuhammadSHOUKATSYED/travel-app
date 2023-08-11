@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet, Link} from 'react-router-dom';
-import '../../../dashboards/Navbar.css';
+import '../../../assets/styles/Navbar.css';
 
 function SuperAdminLayout() {
           return (

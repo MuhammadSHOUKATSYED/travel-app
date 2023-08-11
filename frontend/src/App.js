@@ -56,9 +56,15 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} >
         <Route path="/login" element={<Login />} />
-        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/viewForums" element={<ViewForums />} />
+        <Route path="/viewArticles" element={<ViewArticles/>} />
+        <Route path="/viewHotels" element={<ViewHotels />} />
+        <Route path="/viewRestaurants" element={<ViewRestaurants />} />
+        <Route path="/viewTripAgencies" element={<ViewTripAgencies />} />
+        </Route>
         <Route path="/superAdmin" element={<SuperAdminLayout />}>
           <Route index element={<SuperAdminHome />} />
           <Route path="/superAdmin/viewAdmins" element={<ViewAdmins />} />

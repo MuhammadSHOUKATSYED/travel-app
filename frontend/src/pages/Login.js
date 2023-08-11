@@ -38,7 +38,7 @@ export default function Login() {
                           <button className="btn btn-dark btn-lg btn-block" type="button">Login</button>
                         </div>
                         <Link className="small text-muted" to="/forgetPassword">Forgot password?</Link>
-                        <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>Don't have an account? <Link to="/signUp" style={{ color: '#393f81' }}>Register here</Link></p>
+                        <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>Don't have an account? <Link to="/sign-up" style={{ color: '#393f81' }}>Register here</Link></p>
                         <Link to="/termsOfUse" className="small text-muted">Terms of use.</Link>
                         <Link to="/privacypolicy" className="small text-muted">Privacy policy</Link>
                       </form>

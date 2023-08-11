@@ -1,70 +1,64 @@
-import IMG1 from '../assets/images/hotel.jpg';
-import IMG2 from '../assets/images/restaurant.jpg';
-import IMG3 from '../assets/images/travel.jpg';
-import IMG4 from '../assets/images/travel2.jpg';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import '../assets/styles/homepagestyle.css'; 
-const HomePage = () => {
+import { Outlet, Link } from 'react-router-dom';
+import '../assets/styles/HomePageStyle.css';
+import '../assets/styles/Navbar.css';
+import Footer from '../components/Footer';
+import backgroundImage from '../assets/images/travel.jpg'
+
+function HomePage() {
   return (
-    <div className="container text-center">
-<h1 style={{ fontSize: '28px', fontWeight: 'bold', margin: '20px 0' }}>
-                Welcome to Our Travel Karo.pk
-            </h1>
-            <p style={{ fontSize: '18px', margin: '10px 0' }}>
-                Select your role to log in:
-            </p>
-      <div className="row justify-content-center">
-        <div className="col-md-3 mb-2">
-          <Link to="/superAdmin" className="btn btn-primary btn-block">Super Admin</Link>
+    <>
+            <div className="page-wrapper">
+            <div className="background-image" style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#006400' }}>
+        <Link className="navbar-brand" to="/admin">Travel Karo</Link>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/viewForums">View Forums</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/viewTripAgencies">View Trip Agencies</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/viewRestaurants">View Restaurants</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/viewHotels">View Hotels</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/viewArticles">View Articles</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">Login</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/sign-up">Sign Up</Link>
+            </li>
+          </ul>
         </div>
-        <div className="col-md-3 mb-2">
-          <Link to="/admin" className="btn btn-secondary btn-block">Admin</Link>
-        </div>
-        <div className="col-md-3 mb-2">
-          <Link to="/user" className="btn btn-success btn-block">User</Link>
-        </div>
-        <div className="col-md-3 mb-2">
-          <Link to="/contentWriter" className="btn btn-success btn-block">Content Writer</Link>
-        </div>
-        <div className="col-md-3 mb-2">
-          <Link to="/hotel" className="btn btn-warning btn-block">Hotel</Link>
-        </div>
-        <div className="col-md-3 mb-2">
-          <Link to="/restaurant" className="btn btn-warning btn-block">Restaurant</Link>
-        </div>
-        <div className="col-md-3 mb-2">
-          <Link to="/tripAgency" className="btn btn-warning btn-block">Trip Agency Owner</Link>
-        </div>
+      </nav>
+
+      <div className="content-overlay">
+      <div className="container mt-5">
+      <div className="container">
+        <h1 className="text-center">Welcome to Travel karo</h1>
+        <p className="text-center">This is where you can explore everything for your next trip!</p>
+        <Outlet />
       </div>
-      <div className="carousel-container">
-        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img className="d-block w-100" src={IMG1} alt="First slide" />
-            </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src={IMG2} alt="Second slide" />
-            </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src={IMG3} alt="Third slide" />
-            </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src={IMG4} alt="Fourth slide" />
-            </div>
-          </div>
-          <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="sr-only">Previous</span>
-          </a>
-          <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="sr-only">Next</span>
-          </a>
-        </div>
       </div>
-    </div>
-  )
+      </div>
+
+      <footer className="footer">
+       <Footer />
+      </footer>
+      </div>
+      </div>
+    </>
+  );
 }
 
 export default HomePage;
